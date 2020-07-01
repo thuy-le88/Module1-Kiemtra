@@ -7,11 +7,11 @@
         function inputArray(a) {
             let sizeArr;
             do {
-                sizeArr=+prompt("Nhập vào độ dài của mảng: ");
+                sizeArr=+prompt("Nhập vào số lượng điểm thi: ");
             }
             while (sizeArr<=0);
             for (let i=0;i<sizeArr;i++) {
-                a[i]=+prompt("Nhập vào phần tử "+i+" của mảng:");
+                a[i]=+prompt("Nhập vào điểm thi thứ "+i);
             }
         }
         function displayArray(a) {
