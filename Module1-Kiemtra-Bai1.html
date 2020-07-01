@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm điểm thi cao nhất</title>
+    <script>
+        function inputArray(a) {
+            let sizeArr;
+            do {
+                sizeArr=+prompt("Nhập vào độ dài của mảng: ");
+            }
+            while (sizeArr<=0);
+            for (let i=0;i<sizeArr;i++) {
+                a[i]=+prompt("Nhập vào phần tử "+i+" của mảng:");
+            }
+        }
+        function displayArray(a) {
+            for (let i=0;i<a.length;i++) {
+                document.write(a[i]+" ,");
+            }
+
+        }
+        function findMax(a) {
+            let max=a[0];
+            for (let i=1;i<a.length;i++) {
+                if (max<a[i])
+                    max=a[i]
+            }
+            return max;
+        }
+    </script>
+</head>
+<body>
+<script>
+    let num=[];
+    inputArray(num);
+    displayArray(num);
+    let maxValue=findMax(num);
+    document.write("<br>"+"Điểm thi cao nhất là: "+maxValue);
+</script>
+</body>
+</html>
