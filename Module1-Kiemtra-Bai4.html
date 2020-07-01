@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Lớp hình tròn</title>
 </head>
 <body>
-
+<canvas id="myCanvas"></canvas>
+<script>
+    var canvas=document.getElementById('myCanvas');
+    var context=canvas.getContext('2d');
+    function Circle(x,y,radius,color) {
+        this.x=x;
+        this.y=y;
+        this.radius=radius;
+        this.color=color;
+        this.render=function () {
+            context.beginPath();
+            context.arc(this.x,this.y,this.radius,0,2*Math.PI);
+            context.fillStyle=this.color;
+            context.fill();
+            context.stroke();
+            context.closePath();
+        }
+    }
+    var circle = new Circle(10,10,100,'#000000');
+    circle.render();
+</script>
 </body>
 </html>

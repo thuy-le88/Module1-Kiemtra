@@ -14,12 +14,7 @@
                 a[i]=+prompt("Nhập vào điểm thi thứ "+i);
             }
         }
-        function displayArray(a) {
-            for (let i=0;i<a.length;i++) {
-                document.write(a[i]+" ,");
-            }
 
-        }
         function findMax(a) {
             let max=a[0];
             for (let i=1;i<a.length;i++) {
@@ -34,7 +29,6 @@
 <script>
     let num=[];
     inputArray(num);
-    displayArray(num);
     let maxValue=findMax(num);
     document.write("<br>"+"Điểm thi cao nhất là: "+maxValue);
 </script>
