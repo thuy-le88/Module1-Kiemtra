@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>try romove from array</title>
 </head>
 <body>
-
+<script>
+    function tryRemoveFromArray(a,x) {
+        for(let i=0;i<a.length;i++){
+            if(a[i]==x){
+                a.splice(i,1);
+            }
+        }
+        document.write(a);
+    }
+    let num=[1,2,3,4,5,6];
+    let x=7;
+    tryRemoveFromArray(num,x);
+</script>
 </body>
 </html>
